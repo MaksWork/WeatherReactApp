@@ -1,0 +1,7 @@
+.mainContainer{
+	background-image: url(../img/hot_air_balloon2.jpg);
+	background-position: -200px, 0;
+	background-repeat: no-repeat;
+	background-size: 110%;
+	height: 100%;
+}
