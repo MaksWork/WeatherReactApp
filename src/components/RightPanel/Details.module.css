@@ -1,0 +1,21 @@
+.details{
+	margin-top: 3rem;
+	font-family: "Jost", sans-serif;
+}
+.d_title{
+	font-size: 1.2rem;
+	color:rgba(255, 255, 255, 0.849)
+}
+.d_column{
+	display: flex;
+	flex-direction: column;
+}
+.d_left{
+	float: left;
+}
+.d_right{
+	float: right;
+}
+.d_r_content{
+	color: rgba(255, 255, 255, 0.747);
+}

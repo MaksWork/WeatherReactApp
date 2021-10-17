@@ -1,0 +1,13 @@
+.rightPanel{
+	float: right;
+	padding: 40px;
+	padding-left: 4rem;
+	height: 92.3%;
+	background-color: rgba(65, 65, 65, 0.336);
+}
+p{
+	color: rgba(255, 255, 255, 0.24);
+}
+p:hover{
+	cursor:default;
+}

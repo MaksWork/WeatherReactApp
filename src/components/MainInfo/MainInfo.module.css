@@ -1,0 +1,40 @@
+.mainInfo{
+	position:absolute;
+	bottom: 20%;
+	left: 10%;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	
+}
+.degrees{
+	font-weight: 500;
+	font-size: 130px;
+}
+.city_time{
+	font-family: "Jost", sans-serif;
+	margin: 5px;
+	padding: 0;
+}
+.city{
+	font-size: 70px;
+}
+.time{
+	font-size: 20px;
+	text-align: center;
+}
+
+.icon_total{
+	font-family: "Jost", sans-serif;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 25px;
+}
+.icon{
+	color: #fff;
+	width: 60px;
+}
+.total{
+	font-size: 20px;
+}

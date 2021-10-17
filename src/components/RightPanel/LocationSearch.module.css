@@ -1,0 +1,56 @@
+.searchI{
+	font-size: 20px;
+	font-family: "Jost", sans-serif;
+	color: rgba(255, 255, 255, 0.822);
+	border: none;
+	outline: none;
+	background-color: rgba(65, 65, 65, 0);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.178);
+	margin-top: 1.1rem;
+	margin-right: 5rem;
+	width: 17rem;
+}
+@keyframes test {
+	from{border-bottom: 2px solid rgba(255, 255, 255, 0.178);}
+	to{border-bottom: 2px solid rgba(255, 255, 255, 0.822);}
+}
+.searchI::placeholder{
+	color: rgba(255, 255, 255, 0.178);
+}
+.searchI:focus{
+	animation-name: test;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
+.searchB{
+	border:none;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	background-color: rgba(128, 211, 236, 0.644);
+	padding: 29px;
+}
+.searchB:active{
+	background-color: rgba(101, 172, 194, 0.651);
+}
+.searchB:hover{
+	cursor: pointer;
+}
+.recomend{
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0 2rem 0;
+}
+.rec_city{
+	font-size: 1.2rem;
+	font-family: "Jost", sans-serif;
+	text-align: left;
+	border: none;
+	outline: none;
+	margin-top: 2rem;
+	background-color: rgba(65, 65, 65, 0);
+	color: rgba(255, 255, 255, 0.493);
+}
+.rec_city:hover{
+	cursor: pointer;
+}
