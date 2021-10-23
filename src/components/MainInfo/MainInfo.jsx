@@ -16,14 +16,14 @@ const MainInfo = (props) => {
           set_date_time(get_date_time());
         }, MINUTE_MS);
       
-        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+        return () => clearInterval(interval);
       }, [])
 
     return (
         <div className={styles.mainInfo}>
             <div className={styles.degrees}>{`${props.temp}°`}</div>
             <div className={styles.city_time}>
-                <div className={styles.city}>London</div>
+                <div className={styles.city}>{props.country}</div>
                 <div className={styles.time}>{`${date_time}`}</div>
             </div>
             <div className={styles.icon_total}>

@@ -10,6 +10,9 @@
 	margin-right: 5rem;
 	width: 17rem;
 }
+.searchIError{
+	border-bottom: 2px solid rgba(248, 28, 28, 0.856);
+}
 @keyframes test {
 	from{border-bottom: 2px solid rgba(255, 255, 255, 0.178);}
 	to{border-bottom: 2px solid rgba(255, 255, 255, 0.822);}

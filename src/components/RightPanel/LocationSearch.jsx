@@ -1,28 +1,47 @@
 import React from "react";
 import styles from "./LocationSearch.module.css";
+import { useState } from "react";
+import $ from "jquery";
 
-import search from "../../img/icons8-search-30.png";
+import searchImg from "../../img/icons8-search-30.png";
 
-const LocationSearch = () => {
+const LocationSearch = (props) => {
+    const [location, setLocation] = useState();
+    
+    const locationChange = (e) => {
+        $("input").removeClass(`${styles.searchIError}`);
+        setLocation(e.target.value);
+    };
+    
+    const handleLocationPush = () =>{ 
+        if(!location || /^\s*$/.test(location)){
+            $("input").addClass(`${styles.searchIError}`);
+        }
+        else{
+            props.search(location);
+        }
+    }
+
     return (
         <div className={styles.locationSearch}>
             <div className={styles.searchC}>
                 <input
                     className={styles.searchI}
                     placeholder='Another location'
-                    type='text'></input>
-                <button className={styles.searchB}>
+                    type='text'
+                    onChange={locationChange}></input>
+                <button className={styles.searchB} onClick={handleLocationPush}>
                     <img
                         className={styles.searchB_icon}
                         alt='search'
-                        src={search}></img>
+                        src={searchImg}></img>
                 </button>
             </div>
             <div className={styles.recomend}>
                 <button className={styles.rec_city}>New York</button>
-                <button className={styles.rec_city}>Riga</button>
-                <button className={styles.rec_city}>Daugavpils</button>
-                <button className={styles.rec_city}>Liepaja</button>
+                <button className={styles.rec_city}>Gamburg</button>
+                <button className={styles.rec_city}>Los Angeles</button>
+                <button className={styles.rec_city}>Taiwan</button>
             </div>
         </div>
     );

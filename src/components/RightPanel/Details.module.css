@@ -17,5 +17,7 @@
 	float: right;
 }
 .d_r_content{
+	text-align: center;
 	color: rgba(255, 255, 255, 0.747);
+	padding-right: 5px;
 }
