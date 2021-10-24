@@ -6,6 +6,7 @@ import get_date_time from "../../logic/methods";
 
 import sunny from "../../img/sunny_icon.png";
 
+
 let MINUTE_MS = 1000;
 
 const MainInfo = (props) => {

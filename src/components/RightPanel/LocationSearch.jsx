@@ -15,12 +15,17 @@ const LocationSearch = (props) => {
     
     const handleLocationPush = () =>{ 
         if(!location || /^\s*$/.test(location)){
-            $("input").addClass(`${styles.searchIError}`);
+            errorTyping();
         }
         else{
             props.search(location);
         }
     }
+    
+    const errorTyping = () =>{
+        $("input").addClass(`${styles.searchIError}`);
+    }
+    
 
     return (
         <div className={styles.locationSearch}>
