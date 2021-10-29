@@ -5,6 +5,8 @@ import $ from "jquery";
 
 import searchImg from "../../img/icons8-search-30.png";
 
+const citys = ["New York", "Gamburg", "Taiwan", "Latvia"]
+
 const LocationSearch = (props) => {
     const [location, setLocation] = useState();
     
@@ -13,12 +15,12 @@ const LocationSearch = (props) => {
         setLocation(e.target.value);
     };
     
-    const handleLocationPush = () =>{ 
-        if(!location || /^\s*$/.test(location)){
+    const handleLocationPush = (loc) =>{ 
+        if(!loc || /^\s*$/.test(loc)){
             errorTyping();
         }
         else{
-            props.search(location);
+            props.search(loc);
         }
     }
     
@@ -35,18 +37,18 @@ const LocationSearch = (props) => {
                     placeholder='Another location'
                     type='text'
                     onChange={locationChange}></input>
-                <button className={styles.searchB} onClick={handleLocationPush}>
+                <button className={styles.searchB} onClick={() => handleLocationPush(location)}>
                     <img
                         className={styles.searchB_icon}
                         alt='search'
-                        src={searchImg}></img>
+                        src={searchImg}></img>  
                 </button>
             </div>
             <div className={styles.recomend}>
-                <button className={styles.rec_city}>New York</button>
-                <button className={styles.rec_city}>Gamburg</button>
-                <button className={styles.rec_city}>Los Angeles</button>
-                <button className={styles.rec_city}>Taiwan</button>
+                <button onClick={() => handleLocationPush(citys[0])} className={styles.rec_city}>{citys[0]}</button>
+                <button onClick={() => handleLocationPush(citys[1])} className={styles.rec_city}>{citys[1]}</button>
+                <button onClick={() => handleLocationPush(citys[2])} className={styles.rec_city}>{citys[2]}</button>
+                <button onClick={() => handleLocationPush(citys[3])} className={styles.rec_city}>{citys[3]}</button>
             </div>
         </div>
     );
